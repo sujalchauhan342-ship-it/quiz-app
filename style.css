@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.quiz-container {
+    width: 90%;
+    max-width: 600px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+
+    color: #666;
+    font-weight: bold;
+}
+
+#question {
+    color: #222;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.answer-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid #ddd;
+    border-radius: 10px;
+
+    background: white;
+
+    text-align: left;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.answer-btn:hover:not(:disabled) {
+    background: #f0f0ff;
+    border-color: #667eea;
+}
+
+.answer-btn.correct {
+    background: #c8f7d2;
+    border-color: #28a745;
+}
+
+.answer-btn.wrong {
+    background: #ffd1d1;
+    border-color: #dc3545;
+}
+
+.answer-btn:disabled {
+    cursor: not-allowed;
+}
+
+#next-btn,
+#restart-btn {
+    display: block;
+
+    margin: 25px auto 0;
+
+    padding: 13px 30px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #667eea;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#next-btn:hover,
+#restart-btn:hover {
+    background: #5568d9;
+}
+
+#result-screen {
+    text-align: center;
+}
+
+#result-screen h1 {
+    color: #667eea;
+}
+
+#final-score {
+    font-size: 50px;
+    color: #764ba2;
+    margin: 15px 0;
+}
+
+#result-message {
+    color: #555;
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .quiz-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #question {
+        font-size: 20px;
+    }
+}
